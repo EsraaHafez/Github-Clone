@@ -1,0 +1,308 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('images/git.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* Header Styles */
+header {
+    background:black; /* خلفية مشابهة لموقع GitHub */
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Navbar Grid System */
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto; /* 4 أعمدة للعرض الكامل */
+    gap: 1rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Logo */
+.navbar .logo {
+    grid-column: 1 / 2; /* الشعار في العمود الأول */
+}
+
+.navbar .logo img {
+    height: 28px; /* تغيير حجم الشعار ليتوافق مع الشعار الأصلي */
+}
+
+/* Navigation Menu */
+.nav-menu {
+    grid-column: 2 / 3; /* قائمة التنقل في العمود الثاني */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* المسافة بين العناصر */
+}
+
+/* Dropdowns */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: #24292e; /* خلفية مشابهة لموقع GitHub */
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem; /* حجم خط أصغر قليلاً لمحاكاة GitHub */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    color: #333333;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f6f8fa;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-container input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    width: 200px;
+}
+
+.search-button {
+    background: #2d333b; /* لون الزر مشابه للبحث في GitHub */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+/* Login and Signup Buttons */
+.login-button {
+    grid-column: 3 / 4; /* زر Sign In في العمود الثالث */
+    background: #2d333b; /* لون الزر مشابه لموقع GitHub */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.signup-button {
+    grid-column: 4 / 5; /* زر Sign Up في العمود الرابع */
+    background: #ffffff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+/* Hero Section Styles */
+.hero {
+    /* background: black; */
+    padding: 5rem 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    /* font-size: 2.5rem; */
+}
+
+.hero p {
+    /* font-size: 1.2rem; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: small;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+
+
+/* Main Content */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px); /* Adjust based on header height */
+}
+
+.content {
+    text-align: center;
+}
+
+/* .content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+} */
+
+/* Email Input Group */
+.email-input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.email-input-group input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.btn-submit-email {
+    padding: 0.75rem;
+    background-color: #28a745; /* لون الخلفية الأخضر */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit-email:hover {
+    background-color: #218838;
+}
+
+/* Trial Button */
+.btn-trial {
+    padding: 0.75rem;
+    background-color: #6f42c1; /* لون الخلفية البنفسجي */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-trial:hover {
+    background-color: #5a32a3;
+}
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .search-container {
+        margin: 0;
+    }
+
+    .search-button {
+        margin-left: 0.5rem;
+    }
+
+    .login-button, .signup-button {
+        margin-left: 1rem;
+    }
+
+    .navbar {
+        grid-template-columns: auto 1fr auto auto;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .search-container {
+        margin: 1rem 0;
+    }
+
+    .search-button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .login-button, .signup-button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+}
